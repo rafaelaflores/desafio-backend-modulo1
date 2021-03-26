@@ -1,6 +1,6 @@
-# DESAFIO DO MÓDULO 1 #
+# DESAFIO DO MÓDULO 2 #
 
-## Módulo 1 ##
+## Módulo 2 ##
 Programação Orientada a Objetos com Java, Testes unitários e JUnit.
 
 ## Desafio ##
