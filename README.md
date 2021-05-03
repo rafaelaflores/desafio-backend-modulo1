@@ -26,9 +26,10 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
 
 
 ### Bônus ###
-* Utilização de Design Patterns. Ex.: Builder (não pode ser usado Lombok), Singleton, etc.
+* Utilização de Design Patterns. Ex.: Builder, Singleton, etc.
 * Utilização de Maven ou Gradle
 * Utilização de String Boot Standalone
+* Não pode ser usado Lombok
 ### Material de Apoio ###
 * [Java4Noobs](https://github.com/paulorievrs/java4noobs)
 
@@ -48,9 +49,12 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
     * A importação de arquivo .csv funciona corretamente?
     * Existe a opção de "Cancelar" uma operação? Ex.: Após selecionar editar um produto, é possível "Cancelar"
     * Após realizar alguma operaçào, a aplicação volta para o menu inicial?
-* Existe cobertura de teste unitários nas funcionalidades desenvolvidas?
+* As classes e pacotes estão segregados por responsabilidade ou funcionalidade?
+* Os métodos ou contrutores estão recebendo muitos argumentos por parâmetros?
+* O código da aplicação está com nomes intuitivos de funções, variáveis ou classes?
+* O escopo das variáveis de classes estão sendo utilizados de forma adequada?
+* Existe cobertura de teste unitários de cenário feliz e cenário de erros para as funcionalidades desenvolvidas?
 * A aplicação apresenta bugs?
-* O código da aplicação está legível?
 * Existe um correto tratamento de erros e exceções?
 * A aplicação possui logs úteis?
-* Existe uma breve documentação da aplicação e/ou do código?
+* Existe um readme contendo instruções de como rodar a aplicação?
