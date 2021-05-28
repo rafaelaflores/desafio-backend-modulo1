@@ -49,6 +49,12 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
     * A importação de arquivo .csv funciona corretamente?
     * Existe a opção de "Cancelar" uma operação? Ex.: Após selecionar editar um produto, é possível "Cancelar"
     * Após realizar alguma operaçào, a aplicação volta para o menu inicial?
+* Pode ser claramente entendido o que o código faz?
+* O Código é fácil de entender?
+* A estrutura do código é modular o suficiente?
+* A solução escolhida atende aos requisitos?
+* Como está o desempenho? Existe algum código que afeterá a performance?
+* O código funciona como esperado?
 * As classes e pacotes estão segregados por responsabilidade ou funcionalidade?
 * Os métodos ou contrutores estão recebendo muitos argumentos por parâmetros?
 * O código da aplicação está com nomes intuitivos de funções, variáveis ou classes?
