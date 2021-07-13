@@ -1,19 +1,19 @@
-# DESAFIO DO MÓDULO 2 #
+# DESAFIO DO MÓDULO 1 #
 
-## Módulo 2 ##
 Programação Orientada a Objetos com Java, Testes unitários e JUnit.
 
 ## Desafio ##
 
-Nesta etapa, o Impulsionando continuará o desenvolvimento da Loja Virtual (desafio do módulo 1), agora trabalhando nas funcionalidades de back-end.
+O impulsionando deverá construir um Loja Online *Simples* utilizando os conhecimentos adquiridos durante o módulo.
 
 ### Descrição ###
+Sempre que você tiver um produto que deseja vender, terá um site que o promoverá da melhor maneira possível. Você precisa ter certeza de que as informações da página são relevantes, simples de entender e destacam todos os recursos incríveis do produto para aumenter as vendas.
 Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os seus dados, ou seja, o sistema da loja deve permitir de forma simples e rápida a inclusão, exclusão e edição de produtos. Nesta etapa do desafio, devemos desenvolver as funcionalidades que executem essa importante tarefa de negócio.
 
 ### Requisitos e Funcionalidades Esperadas ###
 - [ ] Construir uma aplicação Java *Standalone* que execute por linha de comando.
 - [ ] As funcionalidades deveráo ter cobertura de testes unitários.
-- [ ] Manipulação dos dados da Loja Virtual no arquivo JSON do Desafio do Módulo 1.
+- [ ] Ao iniciar a aplicação, deverá ler o arquivo CSV dos dados da Loja Virtual e qualquer manipulação destes dados deverá ser armazenado no arquivo.
 - [ ] Ao iniciar a aplicação, exibir um menu numerado com as seguintes opções:
     - [ ] 1. Adicionar Novo Produto: Permitir incluir um novo item na lista de produtos da loja. Ao selecionar essa opção solicitar os seguintes dados para o usuário: nome, preço, quantidade em estoque e categoria.
     - [ ] 2. Editar Produto: Permitir editar os dados de um produto. Ao selecionar essa opção, deverá listar todos os produtos cadastrados e o usuário poderá selecionar um para edição dos dados previamente cadastrados.
@@ -23,13 +23,13 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
     - [ ] 5. Sair: opção para o usuário encerrar o sistema. 
 - [ ] Após o usuário efetuar alguma das operações acima (das opções de 1-4), a aplicação deverá voltar para o menu inicial.
 - [ ] Cada opção do menu, deve ter uma opção de "Cancelar" a operação e voltar para o menu inicial, sem promover alteração dos dados.
-
+- [ ] Não pode ser usado Lombok.
 
 ### Bônus ###
 * Utilização de Design Patterns. Ex.: Builder, Singleton, etc.
 * Utilização de Maven ou Gradle
 * Utilização de String Boot Standalone
-* Não pode ser usado Lombok
+
 ### Material de Apoio ###
 * [Java4Noobs](https://github.com/paulorievrs/java4noobs)
 
