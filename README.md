@@ -24,6 +24,8 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
 - [ ] Após o usuário efetuar alguma das operações acima (das opções de 1-4), a aplicação deverá voltar para o menu inicial.
 - [ ] Cada opção do menu, deve ter uma opção de "Cancelar" a operação e voltar para o menu inicial, sem promover alteração dos dados.
 - [ ] Não pode ser usado Lombok.
+- [ ] Criar um README.md contendo as orientações para rodar a aplicação e suas dependências pela linha de comando.
+
 
 ### Bônus ###
 * Utilização de Design Patterns. Ex.: Builder, Singleton, etc.
