@@ -40,7 +40,6 @@ Em uma loja virtual, deve ser possível gerenciar os produtos disponiveis e os s
 2. Implemente a sua solução conforme solicitado
 3. Compartilhe o link do projeto com o seu mentor 
 
-***
 ## Critérios de Avaliação ##
 * A aplicação está funcionando?
 * A aplicação atende os requisitos solicitados?
