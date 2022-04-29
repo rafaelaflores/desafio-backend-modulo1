@@ -1,40 +1,52 @@
 package br.com.southsystem.loja.application;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-import br.com.southsystem.loja.entities.*;
+import br.com.southsystem.loja.controller.ProdutoController;
+import br.com.southsystem.loja.controller.dao.ProdutoDao;
+import br.com.southsystem.loja.view.*;
 
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner entrada = new Scanner(System.in);
-        ItemMenu[] menu = new ItemMenu[] {
-                new InserirProduto(),
-                new ListarProduto(),
-                new EditarProduto(),
-                new RemoverProduto(),
-                new ImportarProdutos(),
-                new Sair()  //criar exceção para opção digitada errado
-        };
-        boolean sair = false; //quando retornar verdadeiro ele sai do laço
-        do {
-            System.out.println("\n+------------------------------------------+");
-            System.out.println("|          Sistema de Loja +PraTI          |");
-            System.out.println("+------------------------------------------+");
-            for (int i = 0; i < menu.length; i++) { //uso do length porque nao temos um tamanho exato para o vetor
-                System.out.println("| [" + i + "] " + menu[i].getOpcao() + "               |");
-            }
-            System.out.println("+------------------------------------------+");
-            System.out.print("\nEscolha uma opção: ");
+        MainMenuView mainMenuView = new MainMenuView();
+        ProdutoDao dao = new ProdutoDao();
+        ProdutoView produtoView = new ProdutoView();
+        ProdutoController produtoController = new ProdutoController(dao, mainMenuView, produtoView);
+        while(true) {
+            System.out.println(mainMenuView.cabecalho());
+
+            Map<Integer, String> menus = new HashMap<>();
+            menus.put(1, "Adicionar produto");
+            menus.put(2, "Editar produto");
+            menus.put(3, "Remover produto");
+            menus.put(4, "Importar mostruário");
+            menus.put(0, "Sair do programa");
+
+            mainMenuView.menu(menus);
             int opcao = Integer.parseInt(entrada.nextLine());
-            System.out.print("Você deseja continuar (Sim/Não)? ");
-            String continuar = entrada.nextLine();
-            if(continuar.equals("Sim")) {
-                try {
-                    sair = menu[opcao].executar();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+            switch (opcao) {
+                case 0:
+                    System.exit(0);
+                    break;
+                case 1:
+                    produtoController.adicionarProduto();
+                    break;
+                case 2:
+                    produtoController.editarProduto();
+                    break;
+                case 3:
+                    produtoController.removerProduto();
+                    break;
+                case 4:
+                    produtoController.importarProduto();
+                    break;
+                default:
+                    System.out.println("\nOpção Inválida\n");
             }
-        } while(!sair);
+        }
     }
 }

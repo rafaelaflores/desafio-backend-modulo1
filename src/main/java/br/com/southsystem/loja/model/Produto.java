@@ -1,23 +1,33 @@
 package br.com.southsystem.loja.model;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 //essa classe é um objeto de valor
 public class Produto {
     private String codigo;
     private String nome;
     private String categoria;
-    private Double preco;
-    private Integer qntEstoque;
+    private BigDecimal preco;
+    private Integer quantidade;
 
     public Produto() {
-
     }
 
-    public Produto(String codigo, String nome, String categoria, Double preco, Integer qntEstoque) {
+    public Produto(String[] parameters) {
+        this.codigo = parameters[0];
+        this.nome = parameters[1];
+        this.categoria = parameters[2];
+        this.preco = new BigDecimal(parameters[3].replace("\"", ""));
+        this.quantidade = Integer.parseInt(parameters[4]);
+    }
+
+    public Produto(String codigo, String nome, String categoria, BigDecimal preco, Integer qntEstoque) {
         super();
         this.codigo = codigo;
         this.nome = nome;
         this.categoria = categoria;
         this.preco = preco;
-        this.qntEstoque = qntEstoque;
+        this.quantidade = qntEstoque;
     }
 
     public String getCodigo() {
@@ -26,6 +36,10 @@ public class Produto {
 
     public String getNome() {
         return nome;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public void setNome(String nome) {
@@ -40,24 +54,24 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    public Double getPreco() {
+    public BigDecimal getPreco() {
         return preco;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
 
-    public Integer getQntEstoque() {
-        return qntEstoque;
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
-    public void setQntEstoque(Integer qntEstoque) {
-        this.qntEstoque = qntEstoque;
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
     @Override
     public String toString() {
-        return "\nCódigo do Produto: " + codigo + "\nProduto: " + nome + "\nCategoria: " + categoria + "\nPreço: " + preco + "\nQuantidade em estoque: " + qntEstoque;
+        return codigo + "," + nome + "," + categoria.toUpperCase() + "," + preco.setScale(2, RoundingMode.HALF_EVEN) + "," + quantidade;
     }
 }
